@@ -33,11 +33,11 @@ end
 def turn(board)
   puts "Please enter 1-9:"
     index = gets.strip
-    input_to_index(index)
-  if valid_move?(board, index) == true
+    input_to_index(index) = x
+  if valid_move?(board, x) == true
     
-    move(board, index, player)
-  elsif valid_move?(board, index) == false
+    move(board, x, player)
+  elsif valid_move?(board, x) == false
    puts "Please enter 1-9:"
     #index = gets.strip
     #input_to_index(index)
@@ -48,7 +48,7 @@ def turn(board)
     #
 end
 
-def move(board, index, player = "X")
-  board[index] = player
+def move(board, x, player = "X")
+  board[x] = player
   display_board(board)
 end
